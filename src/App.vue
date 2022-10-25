@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  background: linear-gradient(132deg, rgb(65, 80, 95) 0.00%, rgb(36, 37, 38) 100.00%);
+  background: linear-gradient(150deg, rgb(54, 60, 58) 0.00%, rgb(36, 37, 38) 100.00%);
 }
 
 *,

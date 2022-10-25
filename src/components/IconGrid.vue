@@ -1,35 +1,33 @@
 <template>
-  <div class="row">
-    <draggable
-        :list="list"
-        :options="{delay:1000}"
-        class="list-group"
-        ghost-class="ghost"
+  <draggable
+      :list="list"
+      :options="{delay:1000}"
+      class="list-group"
+      ghost-class="ghost"
+  >
+    <div
+        class="list-group-item"
+        v-for="item in list"
+        :key="item.label"
     >
-      <div
-          class="list-group-item"
-          v-for="item in list"
-          :key="item.label"
-      >
-        <div class="item-wrapper">
-          <picture>
-            <source
-                :srcset="require(`/src/assets/${item.title}.png`)"
-                media="(min-width: 768px)"
-            >
-            <img
-                :src="require(`/src/assets/small/${item.title}.png`)"
-                alt="Album cover"
-                class="image"
-            >
-          </picture>
-          <span class="label">
+      <div class="item-wrapper">
+        <picture>
+          <source
+              :srcset="require(`/src/assets/${item.title}.png`)"
+              media="(min-width: 768px)"
+          >
+          <img
+              :src="require(`/src/assets/small/${item.title}.png`)"
+              alt="Album cover"
+              class="image"
+          >
+        </picture>
+        <span class="label">
             {{ item.label | trimString(7) }}
           </span>
-        </div>
       </div>
-    </draggable>
-  </div>
+    </div>
+  </draggable>
 </template>
 
 <script>

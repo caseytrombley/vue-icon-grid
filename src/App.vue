@@ -39,6 +39,6 @@ body {
   text-align: center;
   color: #2c3e50;
   margin: 60px 20px;
-  height: 100vh;
+  //height: 100vh;
 }
 </style>

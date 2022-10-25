@@ -75,6 +75,7 @@ export default {
 .list-group-item {
   margin: 0 auto;
   padding: 10px;
+  text-align: center;
 
   .item-wrapper {
     width: 80px;

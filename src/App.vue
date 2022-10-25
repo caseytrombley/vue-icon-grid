@@ -38,9 +38,6 @@ body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
   padding: 60px 20px;
-  //height: 100vh;
 }
 </style>

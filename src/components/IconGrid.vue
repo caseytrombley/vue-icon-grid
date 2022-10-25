@@ -8,23 +8,23 @@
     >
       <div
           class="list-group-item"
-          v-for="element in list"
-          :key="element.label"
+          v-for="item in list"
+          :key="item.label"
       >
         <div class="item-wrapper">
           <picture>
             <source
-                :srcset="require(`/src/assets/${element.title}.png`)"
+                :srcset="require(`/src/assets/${item.title}.png`)"
                 media="(min-width: 768px)"
             >
             <img
-                :src="require(`/src/assets/small/${element.title}.png`)"
+                :src="require(`/src/assets/small/${item.title}.png`)"
                 alt="Album cover"
                 class="image"
             >
           </picture>
           <span class="label">
-            {{ element.label }}
+            {{ item.label | trimString(7) }}
           </span>
         </div>
       </div>
@@ -43,18 +43,18 @@ export default {
   data() {
     return {
       list: [
-        { id: 0, label: "One", title: 'with-the-beatles' },
-        { id: 1, label: "Two", title: 'a-hard-days-night' },
-        { id: 2, label: "Three", title: 'beatles-for-sale' },
-        { id: 3, label: "Four", title: 'help' },
-        { id: 4, label: "Five", title: 'rubber-soul' },
-        { id: 5, label: "Six", title: 'revolver' },
-        { id: 5, label: "Seven", title: 'magical-mystery-tour' },
-        { id: 5, label: "Eight", title: 'sgt-peppers' },
-        { id: 5, label: "Nine", title: 'white-album' },
-        { id: 5, label: "Ten", title: 'yellow-submarine' },
-        { id: 5, label: "Eleven", title: 'abbey-road' },
-        { id: 5, label: "Twelve", title: 'let-it-be' },
+        { id: 0, label: "One", title: 'please-please-me' },
+        { id: 1, label: "Two", title: 'with-the-beatles' },
+        { id: 2, label: "Three", title: 'a-hard-days-night' },
+        { id: 3, label: "Four", title: 'beatles-for-sale' },
+        { id: 4, label: "Five", title: 'help' },
+        { id: 5, label: "Six", title: 'rubber-soul' },
+        { id: 6, label: "Seven", title: 'revolver' },
+        { id: 7, label: "Eight", title: 'sgt-peppers' },
+        { id: 8, label: "Nine", title: 'white-album' },
+        { id: 9, label: "Ten", title: 'yellow-submarine' },
+        { id: 10, label: "Eleven", title: 'abbey-road' },
+        { id: 11, label: "Twelve", title: 'let-it-be' },
       ],
     };
   },
